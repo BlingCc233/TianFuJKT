@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四川天府健康通</title>    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+
+<script type="text/javascript">
+    //判断时间是否为个位数，如果时间为个位数就在时间之前补上一个“0”
+    function check(val) {
+        if (val < 10) {
+            return ("0" + val);
+        }
+        else {
+            return (val);
+        }
+    }
+    function displayTime() {
+        //获取div元素
+        var timeDiv=document.getElementById("timeDiv");
+        //获取系统当前的年、月、日、小时、分钟、毫秒
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var day = date.getDate();
+        var hour = date.getHours();
+        var minutes = date.getMinutes();
+        var second = date.getSeconds();
+        var timestr = year + "-" + month + "-" + day + "  " + check(hour)
+            + ":" + check(minutes) + ":" + check(second);
+        //将系统时间设置到div元素中
+        timeDiv.innerHTML = timestr;
+    }
+    //每隔1秒调用一次displayTime函数
+    function start(){
+        window.setInterval("displayTime()",1000)//单位是毫秒
+    }
+</script>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+        user-select: none;
+        -webkit-tap-highlight-color:rgba(0,0,0,0);
+        font-family: "Microsoft YaHei UI";
+    }
+    body{
+        width: 100%;
+        height: 100%;
+        background-color: #3f56da;
+
+    }
+    .backbtn{
+        color: #fff;
+        /*width:15px;*/
+        /*height:15px;*/
+        background-color: #3f56da;
+        position: absolute;
+        font-size: 25px;
+        top: 5px;
+        left: 20px;
+        text-decoration: none;
+        outline: none;
+    }
+    .topword{
+        padding-top: 12px;
+        text-align: center;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 300;
+    }
+    .lfter{
+        color: #fff;
+        padding-left: 12px;
+        font-size: 22px;
+    }
+    .rghter{
+        color: #fff;
+        padding-left: 15px;
+        font-size: 18px;
+    }
+    .blockers{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .location {
+        margin-top: 5%;
+        width:85%;
+        background-color: #fff;
+        height: 130px;
+        border-radius: 10px;
+    }
+    .bigword{
+        color: #000;
+        font-size: 25px;
+        padding-left: 15px;
+        padding-top: 10px;
+        font-weight: bold;
+    }
+    .next{
+        margin-top: 5%;
+        width:85%;
+        background-color: #fff;
+        border-radius: 10px;
+        height: 600px;
+    }
+    .xiaochengxu{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border-radius: 60px;
+        background:rgba(0,0,0,0.3);
+        width: 80px;
+        height: 26px;
+    }
+    .circle{
+        margin-top: 10%;
+        font-size: 130px;
+        text-align: center;
+        color: #4ba474;
+    }
+    .time{
+        margin-top: 7%;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: #000;
+    }
+    .grey{
+        padding-left: 15px;
+        padding-top: 5px;
+        font-size: 13px;
+        color: grey;
+        padding-bottom: 5%;
+    }
+    .hesuan{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10%;
+    }
+    .tfhours{
+        height: 70px;
+        background-color: #02a76f;
+        width: 45%;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .travel{
+
+
+        height: 70px;
+        background-color: #02a76f;
+        width: 45%;
+        border-radius: 7px;
+    }
+    .refresh{
+        margin-top:3px;
+        width: 90%;
+        height: 16px;
+        background-color: #fff;
+        text-align: center;
+        color: #02a76f;
+        font-size: 10px;
+        font-weight: bold;
+        border-radius: 90px;
+    }
+</style>
+<body onload="start();">
+    <a class="backbtn" href="identity.html" ><</a>
+    <p class="topword">场所登记信息</p>
+    <div class="xiaochengxu">
+        <span class="lfter"><i class="fa-solid fa-ellipsis" style=""></i></span>
+        <span class="rghter"><i class="fa-regular fa-circle-dot" style="padding-bottom: 3px"></i></span>
+    </div>
+    <div class="blockers">
+        <div class="location">
+            <p class="bigword">龙电湖子时技天大街学</p>
+            <p style="font-size: 13px;padding-left: 15px;padding-top: 6px;color: #de9c4c;">学超校市</p>
+            <p style="font-size: 15px;padding-left: 15px;padding-top:3px;color: #000;">四川省 / 成都市 / 郫都区</p>
+            <p style="font-size: 15px;padding-left: 15px;padding-top:3px;color:grey;">高新区龙电湖子成科都技时大代学</p>
+        </div>
+        <div class="next">
+            <p class="bigword" style="padding-top: 20px">王*</p>
+            <p class="grey" style="padding-top: 15px">身份证号： 42***************54</p>
+            <hr style="border-top: 1px dashed #8c8b8b;width: 90%;height: 1px;margin-left: 15px" />
+
+            <div id="timeDiv" class="time">2022-11-32 00:00:00</div>
+
+            <div class="circle"><i class="fa-solid fa-circle-check"></i></div>
+            <p style="margin-top:2%;text-align: center;font-size: 30px;color: #4ba474;font-weight: bold;">绿码</p>
+            <p style="margin-top:3%;color: #4ba474; font-size:25px;text-align: center;">健康状态为低风险</p>
+            <div class="hesuan">
+                <div class="tfhours">
+                    <p style="font-size:11px;color: #fff;padding-right: 25px;font-weight: bold;padding-top: 2px">省内24小时核酸： 阴性</p>
+                    <p style="font-size:10px;color: #fff;padding-right: 90px;padding-top: 1px">13/32 25时</p>
+                    <div class="refresh">点击更新</div>
+
+                </div>
+                <div style="width:2%"></div>
+                <div class="travel">
+
+                    <p style="font-size:11px;color: #fff;padding-left: 10px;font-weight: bold;padding-top: 10px">风险城市旅居史</p>
+<!--                    <p style="font-size:4px;color: #fff;padding-left: 10px;padding-top: 3px">11/11 03时</p>-->
+                    <p style="font-size: 40px;color: #307151;padding-left:110px">无</p>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
