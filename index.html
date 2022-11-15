@@ -123,10 +123,28 @@
         height: 26px;
     }
     .circle{
-        margin-top: 10%;
+        width: 130px;
+        height:  150px;
+        margin: 0 auto;
+        margin-top: 7%;
         font-size: 130px;
         text-align: center;
         color: #4ba474;
+        animation:mymove 1.5s infinite;
+        -webkit-animation:mymove 1.5s infinite;
+    }
+    @keyframes mymove
+    {
+        0% {font-size:110px;}
+        50% {font-size:130px;}
+        100% {font-size:110px;}
+    }
+
+    @-webkit-keyframes mymove /* Safari and Chrome */
+    {
+        0% {font-size:110px;}
+        50% {font-size:130px;}
+        100% {font-size:110px;}
     }
     .time{
         margin-top: 7%;
