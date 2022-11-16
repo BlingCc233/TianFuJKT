@@ -38,6 +38,17 @@
     window.setInterval("displayTime()",1000)//单位是毫秒
 
   }
+  var time = 60;
+  function test() {
+    setInterval(function () {
+      time--;
+      document.querySelector("#showtime").innerHTML = "点击更新 (" + time + ")";
+      if (time == 0) {
+        time = 60;
+      }
+
+    }, 1000);
+  }
 </script>
 <style>
   *{
@@ -248,7 +259,7 @@
     margin-top: -20px;
   }
 </style>
-<body onload="start();">
+<body onload="start();test();">
 <p class="topword">四川天府健康通</p>
 <div class="xiaochengxu">
   <span class="lfter"><i class="fa-solid fa-ellipsis" style=""></i></span>
@@ -289,7 +300,7 @@
       <div class="tfhours">
         <p style="font-size:11px;color: #fff;padding-right: 25px;font-weight: bold;padding-top: 2px">省内24小时核酸： 阴性</p>
         <p style="font-size:10px;color: #fff;padding-right: 90px;padding-top: 1px">13/32 25时</p>
-        <div class="refresh">点击更新</div>
+        <div class="refresh" id="showtime">点击更新</div>
 
       </div>
       <div style="width:2%"></div>

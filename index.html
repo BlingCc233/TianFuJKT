@@ -38,6 +38,17 @@
     function start(){
         window.setInterval("displayTime()",1000)//单位是毫秒
     }
+    var time = 60;
+    function test() {
+        setInterval(function () {
+            time--;
+            document.querySelector("#showtime").innerHTML = "点击更新 (" + time + ")";
+            if (time == 0) {
+                time = 60;
+            }
+
+        }, 1000);
+    }
 </script>
 <style>
     *{
@@ -186,14 +197,13 @@
         border-radius: 7px;
     }
     .refresh{
-        margin-top:3px;
+        margin-top:7px;
         width: 90%;
-        height: 16px;
+        height: 18px;
         background-color: #fff;
         text-align: center;
         color: #02a76f;
-        font-size: 10px;
-        font-weight: bold;
+        font-size: 13px;
         border-radius: 90px;
     }
 
@@ -204,7 +214,7 @@
         margin-top: -20px;
     }
 </style>
-<body onload="start();">
+<body onload="start();test();">
 <a class="backbtn" href="identity.html" ><</a>
 <p class="topword">场所登记信息</p>
 <div class="xiaochengxu">
@@ -232,7 +242,7 @@
             <div class="tfhours">
                 <p style="font-size:11px;color: #fff;padding-right: 25px;font-weight: bold;padding-top: 2px">省内24小时核酸： 阴性</p>
                 <p style="font-size:10px;color: #fff;padding-right: 90px;padding-top: 1px">13/32 25时</p>
-                <div class="refresh">点击更新</div>
+                <div class="refresh" id="showtime">点击更新</div>
 
             </div>
             <div style="width:2%"></div>
