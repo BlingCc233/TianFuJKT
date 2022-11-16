@@ -143,11 +143,39 @@
     margin: 0 auto;
     margin-top: 2%;
     padding-right: 40px;
-    width: 80%;
-    height: 80px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(btn.jpg);
+    width: 40%;
+    height: 45px;
+    border-radius:90px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #3f56da;
+    padding-left: 50px;
+
+  }
+  .num{
+     width: 300%;
+     height: 12px;
+     margin: 0 auto;
+     overflow: hidden;
+     text-align: center;
+     background: url("1.3.png");
+     animation: flow 4s linear 0s infinite normal running ;
+     /*-moz-animation: flow 1s ease 0s infinite normal running;*/
+     /*-webkit-animation: flow 1s ease 0s infinite normal running;*/
+     /*-o-animation: flow 1s ease 0s infinite normal running;*/
+   }
+  @keyframes flow {
+    0%{transform: translateX(8px)}
+    100%{transform: translateX(-238px)}
+  }
+  .num img{
+    width: 100%;
+    height: 255px;
+
   }
   .time{
     text-align: center;
@@ -167,7 +195,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 1%;
+    margin-top: 2%;
   }
   .tfhours{
     height: 70px;
@@ -224,7 +252,7 @@
 <div class="toppic"></div>
 <div class="blockers">
   <div class="notice">
-    <div style="width:20px;height:20px;background-color:#00c1c8;border-radius:100%;margin-left:10px;"></div>
+    <div style="width:30px;height:30px;background-color:#00c1c8;border-radius:100%;margin-left:10px;background-repeat: no-repeat;background-size: cover;background-image: url(panda.png";></div>
     <marquee style="width:80%;margin-left:7%;padding-top:1px;">👉场所码一定要扫吗？被赋黄码怎么办……四川疾控专家权威解答</marquee>
   </div>
   <div class="next">
@@ -239,7 +267,19 @@
 
     <div class="circle"></div>
     <p style="margin-top:1%;color: #4ba474; font-size:15px;text-align: center;">绿码：健康状态为低风险</p>
-    <div class="btn"></div>
+    <div class="btn">
+
+      <span style="margin-left:0px;margin-right:0px;color: #fff; font-size: 20px;padding-top: 5px;">
+      <i class="fa-solid fa-qrcode"></i>
+      </span>
+      <span style="margin-left: 0px;">
+      <a href="index.html" style="color: #fff;text-decoration: none;font-size: 15px;">场所扫码</a>
+      </span>
+      <span style="font-size: 30px;margin-left: 0px;padding-bottom: 5px;">
+        >
+      </span>
+    </div>
+    <div style="width: 90%;margin:0 auto;margin-top: 1%;"><div class="num"></div></div>
     <div class="hesuan">
       <div class="tfhours">
         <p style="font-size:11px;color: #fff;padding-right: 25px;font-weight: bold;padding-top: 2px">省内24小时核酸： 阴性</p>
