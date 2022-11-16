@@ -111,7 +111,7 @@
   }
   .next{
     margin-top: 5%;
-    padding-top: 5%;
+    padding-top: 2%;
     width:85%;
     background-color: #fff;
     border-radius: 10px;
@@ -157,17 +157,17 @@
 
   }
   .num{
-     width: 300%;
-     height: 12px;
-     margin: 0 auto;
-     overflow: hidden;
-     text-align: center;
-     background: url("1.3.png");
-     animation: flow 4s linear 0s infinite normal running ;
-     /*-moz-animation: flow 1s ease 0s infinite normal running;*/
-     /*-webkit-animation: flow 1s ease 0s infinite normal running;*/
-     /*-o-animation: flow 1s ease 0s infinite normal running;*/
-   }
+    width: 300%;
+    height: 12px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+    background: url("1.3.png");
+    animation: flow 4s linear 0s infinite normal running ;
+    /*-moz-animation: flow 1s ease 0s infinite normal running;*/
+    /*-webkit-animation: flow 1s ease 0s infinite normal running;*/
+    /*-o-animation: flow 1s ease 0s infinite normal running;*/
+  }
   @keyframes flow {
     0%{transform: translateX(8px)}
     100%{transform: translateX(-238px)}
@@ -195,13 +195,13 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 2%;
+    margin-top: 4%;
   }
   .tfhours{
-    height: 70px;
+    height: 75px;
     background-color: #02a76f;
     width: 45%;
-    border-radius: 7px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -210,20 +210,19 @@
   .travel{
 
 
-    height: 70px;
+    height: 75px;
     background-color: #02a76f;
     width: 45%;
-    border-radius: 7px;
+    border-radius: 5px;
   }
   .refresh{
-    margin-top:3px;
+    margin-top:7px;
     width: 90%;
-    height: 16px;
+    height: 18px;
     background-color: #fff;
     text-align: center;
     color: #02a76f;
-    font-size: 10px;
-    font-weight: bold;
+    font-size: 13px;
     border-radius: 90px;
   }
   .twoic{
@@ -242,6 +241,12 @@
     height: 21%;
     background-image: url(toppic.jpg);
   }
+  .wu{
+    position: fixed;
+    font-size: 35px;color: #307151;
+    margin-left: 115px;
+    margin-top: -20px;
+  }
 </style>
 <body onload="start();">
 <p class="topword">四川天府健康通</p>
@@ -252,14 +257,14 @@
 <div class="toppic"></div>
 <div class="blockers">
   <div class="notice">
-    <div style="width:30px;height:30px;background-color:#00c1c8;border-radius:100%;margin-left:10px;background-repeat: no-repeat;background-size: cover;background-image: url(panda.png";></div>
-    <marquee style="width:80%;margin-left:7%;padding-top:1px;">👉场所码一定要扫吗？被赋黄码怎么办……四川疾控专家权威解答</marquee>
+    <div style="width:30px;height:30px;background-color:#00c1c8;border-radius:100%;margin-left:10px;background-repeat: no-repeat;background-size: cover;background-image: url(panda.png)";></div>
+    <marquee style="width:80%;margin-left:4%;padding-top:1px;">👉场所码一定要扫吗？被赋黄码怎么办……四川疾控专家权威解答&emsp;👉疯狂星期四，V我50，只因你太美</marquee>
   </div>
   <div class="next">
     <span class="bigword" style="margin-left:2px">王*</span>
     <span class="twoic" style="margin-left:50%;"><i class="fa-sharp fa-solid fa-user-tie"></i></span>
     <span class="twoic" style="margin-left:10%"><i class="fa-solid fa-user-group"></i></span>
-    <p class="grey" style="padding-top: 15px">42***************54 &emsp; &nbsp;&nbsp;&nbsp; &emsp; 个人信息&emsp;家庭码</p>
+    <p class="grey" style="padding-top: 1%;">42***************54 &emsp; &nbsp;&nbsp;&nbsp; &emsp; 个人信息&emsp;家庭码</p>
     <span><hr style="border-top: 1px dashed #8c8b8b;width: 90%;height: 1px;margin-left: 15px" /></span>
     <span ><div style="width:15px;height:15px;color:#3f56da;border-radius:90px;"></div></span>
 
@@ -275,11 +280,11 @@
       <span style="margin-left: 0px;">
       <a href="index.html" style="color: #fff;text-decoration: none;font-size: 15px;">场所扫码</a>
       </span>
-      <span style="font-size: 30px;margin-left: 0px;padding-bottom: 5px;">
+      <span style="font-size: 30px;margin-left: 0px;padding-bottom: 2px;">
         >
       </span>
     </div>
-    <div style="width: 90%;margin:0 auto;margin-top: 1%;"><div class="num"></div></div>
+    <div style="width: 90%;margin:0 auto;margin-top: 4%;"><div class="num"></div></div>
     <div class="hesuan">
       <div class="tfhours">
         <p style="font-size:11px;color: #fff;padding-right: 25px;font-weight: bold;padding-top: 2px">省内24小时核酸： 阴性</p>
@@ -291,14 +296,18 @@
       <div class="travel">
 
         <p style="font-size:11px;color: #fff;padding-left: 10px;font-weight: bold;padding-top: 10px">风险城市旅居史</p>
+        <p style="font-size:10px;color: #fff;padding-left: 10px;padding-top: 1px">13/32 25时</p>
+
         <!--                    <p style="font-size:4px;color: #fff;padding-left: 10px;padding-top: 3px">11/11 03时</p>-->
-        <p style="font-size: 40px;color: #307151;padding-left:110px">无</p>
+        <!--<p style="font-size: 35px;color: #307151;padding-left:110px">无</p>-->
+        <div class="wu">无</div>
 
       </div>
 
 
     </div>
   </div>
+  <div class="next"></div>
 
 </div>
 </body>
